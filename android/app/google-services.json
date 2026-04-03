@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "869648216540",
+    "project_id": "flutter-freecodecamp-course",
+    "storage_bucket": "flutter-freecodecamp-course.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869648216540:android:4bd809b0d13544d6b29f19",
+        "android_client_info": {
+          "package_name": "com.example.freecodecamp_flutter_course"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWPb_XE2qLnsjmWnJ7GjqCnIoNMwEqV0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

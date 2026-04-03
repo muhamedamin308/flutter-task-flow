@@ -1,0 +1,25 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "flutter-freecodecamp-course",
+          "appId": "1:869648216540:android:4bd809b0d13544d6b29f19",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "flutter-freecodecamp-course",
+          "configurations": {
+            "android": "1:869648216540:android:4bd809b0d13544d6b29f19",
+            "ios": "1:869648216540:ios:6a9cca03cc64019bb29f19",
+            "macos": "1:869648216540:ios:6a9cca03cc64019bb29f19",
+            "web": "1:869648216540:web:17f7f41606edc9a7b29f19",
+            "windows": "1:869648216540:web:9746124cb685734fb29f19"
+          }
+        }
+      }
+    }
+  }
+}
