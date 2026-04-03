@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -40,49 +41,49 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAps4XeB2k4IqODwpe2tbUkdpYqqzjMrQU',
-    appId: '1:869648216540:web:17f7f41606edc9a7b29f19',
-    messagingSenderId: '869648216540',
-    projectId: 'flutter-freecodecamp-course',
-    authDomain: 'flutter-freecodecamp-course.firebaseapp.com',
-    storageBucket: 'flutter-freecodecamp-course.firebasestorage.app',
-    measurementId: 'G-Z8M6VMY1EN',
+  static FirebaseOptions get web => FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY_WEB']!,
+    appId: dotenv.env['FIREBASE_APP_ID_WEB']!,
+    messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID']!,
+    projectId: dotenv.env['FIREBASE_PROJECT_ID']!,
+    authDomain: dotenv.env['FIREBASE_AUTH_DOMAIN_WEB']!,
+    storageBucket: dotenv.env['FIREBASE_STORAGE_BUCKET']!,
+    measurementId: dotenv.env['FIREBASE_MEASUREMENT_ID_WEB']!,
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDWPb_XE2qLnsjmWnJ7GjqCnIoNMwEqV0E',
-    appId: '1:869648216540:android:4bd809b0d13544d6b29f19',
-    messagingSenderId: '869648216540',
-    projectId: 'flutter-freecodecamp-course',
-    storageBucket: 'flutter-freecodecamp-course.firebasestorage.app',
+  static FirebaseOptions get android => FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY_ANDROID']!,
+    appId: dotenv.env['FIREBASE_APP_ID_ANDROID']!,
+    messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID']!,
+    projectId: dotenv.env['FIREBASE_PROJECT_ID']!,
+    storageBucket: dotenv.env['FIREBASE_STORAGE_BUCKET']!,
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC07lnKEeOEQ-Ienef-TiqLOAqLVDKcj9E',
-    appId: '1:869648216540:ios:6a9cca03cc64019bb29f19',
-    messagingSenderId: '869648216540',
-    projectId: 'flutter-freecodecamp-course',
-    storageBucket: 'flutter-freecodecamp-course.firebasestorage.app',
-    iosBundleId: 'com.example.freecodecampFlutterCourse',
+  static FirebaseOptions get ios => FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY_IOS']!,
+    appId: dotenv.env['FIREBASE_APP_ID_IOS']!,
+    messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID']!,
+    projectId: dotenv.env['FIREBASE_PROJECT_ID']!,
+    storageBucket: dotenv.env['FIREBASE_STORAGE_BUCKET']!,
+    iosBundleId: dotenv.env['FIREBASE_IOS_BUNDLE_ID']!,
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyC07lnKEeOEQ-Ienef-TiqLOAqLVDKcj9E',
-    appId: '1:869648216540:ios:6a9cca03cc64019bb29f19',
-    messagingSenderId: '869648216540',
-    projectId: 'flutter-freecodecamp-course',
-    storageBucket: 'flutter-freecodecamp-course.firebasestorage.app',
-    iosBundleId: 'com.example.freecodecampFlutterCourse',
+  static FirebaseOptions get macos => FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY_IOS']!,
+    appId: dotenv.env['FIREBASE_APP_ID_IOS']!,
+    messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID']!,
+    projectId: dotenv.env['FIREBASE_PROJECT_ID']!,
+    storageBucket: dotenv.env['FIREBASE_STORAGE_BUCKET']!,
+    iosBundleId: dotenv.env['FIREBASE_IOS_BUNDLE_ID']!,
   );
 
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyAps4XeB2k4IqODwpe2tbUkdpYqqzjMrQU',
-    appId: '1:869648216540:web:9746124cb685734fb29f19',
-    messagingSenderId: '869648216540',
-    projectId: 'flutter-freecodecamp-course',
-    authDomain: 'flutter-freecodecamp-course.firebaseapp.com',
-    storageBucket: 'flutter-freecodecamp-course.firebasestorage.app',
-    measurementId: 'G-T7DWXLWTRT',
+  static FirebaseOptions get windows => FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY_WINDOWS']!,
+    appId: dotenv.env['FIREBASE_APP_ID_WINDOWS']!,
+    messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID']!,
+    projectId: dotenv.env['FIREBASE_PROJECT_ID']!,
+    authDomain: dotenv.env['FIREBASE_AUTH_DOMAIN_WINDOWS']!,
+    storageBucket: dotenv.env['FIREBASE_STORAGE_BUCKET']!,
+    measurementId: dotenv.env['FIREBASE_MEASUREMENT_ID_WINDOWS']!,
   );
 }

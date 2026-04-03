@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart'; // Add this
+import 'package:flutter_dotenv/flutter_dotenv.dart'; // Add this
 import 'firebase_options.dart'; // Add this (it imports the file you just showed me)
 
 void main() async {
   // 1. This ensures that the Flutter framework is ready before we start Firebase
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Load environment variables
+  await dotenv.load(fileName: ".env");
 
   // 2. This initializes Firebase using the "dictionary" file you generated
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
