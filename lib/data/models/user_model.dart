@@ -4,14 +4,14 @@ import 'package:freecodecamp_flutter_course/core/constants/app_constants.dart';
 class UserModel {
   final String uid;
   final String email;
-  final String photoUrl;
+  final String? photoUrl;
   final String displayName;
 
   const UserModel({
     required this.uid,
     required this.email,
-    required this.photoUrl,
     required this.displayName,
+    this.photoUrl,
   });
 
   factory UserModel.fromFirestore(DocumentSnapshot<Map<String, dynamic>> doc) {
