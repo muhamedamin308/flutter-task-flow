@@ -15,5 +15,5 @@ void main() async {
   // 2. This initializes Firebase using the "dictionary" file you generated
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
-  runApp(const ProviderScope(child: TaskFlowApp()));
+  runApp(ProviderScope(child: TaskFlowApp() as Widget));
 }

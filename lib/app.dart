@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:freecodecamp_flutter_course/core/theme/app_theme.dart';
+import 'package:freecodecamp_flutter_course/presentation/providers/auth_provider.dart';
+import 'package:freecodecamp_flutter_course/presentation/providers/theme_provider.dart';
 
 class TaskFlowApp extends ConsumerState {
   @override
@@ -9,10 +12,10 @@ class TaskFlowApp extends ConsumerState {
 
     return MaterialApp(
       title: 'TaskFlow',
-      debugshowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
-      thememode: themeMode,
+      themeMode: themeMode,
       home: authState.when(
         loading: () =>
             const Scaffold(body: Center(child: CircularProgressIndicator())),
