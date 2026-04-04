@@ -106,6 +106,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       textInputAction: TextInputAction.next,
                       validator: Validators.email,
                       decoration: const InputDecoration(
+                        hintText: 'Enter your email address.',
                         labelText: 'Email',
                         prefixIcon: Icon(Icons.email_outlined),
                       ),
@@ -118,6 +119,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       onFieldSubmitted: (_) => _submit(),
                       validator: Validators.password,
                       decoration: InputDecoration(
+                        hintText: 'Must be at least 8 characters.',
                         labelText: 'Password',
                         prefixIcon: const Icon(Icons.lock_outline_rounded),
                         suffixIcon: IconButton(

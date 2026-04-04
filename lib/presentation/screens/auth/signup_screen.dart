@@ -112,6 +112,7 @@ class _SignupScreenState extends ConsumerState<SignupScreen> {
                   textCapitalization: TextCapitalization.words,
                   validator: Validators.displayName,
                   decoration: const InputDecoration(
+                    hintText: 'Enter your full name.',
                     labelText: 'Full Name',
                     prefixIcon: Icon(Icons.person_outline_rounded),
                   ),
@@ -123,6 +124,7 @@ class _SignupScreenState extends ConsumerState<SignupScreen> {
                   textInputAction: TextInputAction.next,
                   validator: Validators.email,
                   decoration: const InputDecoration(
+                    hintText: 'Enter your email address.',
                     labelText: 'Email',
                     prefixIcon: Icon(Icons.email_outlined),
                   ),
@@ -134,6 +136,7 @@ class _SignupScreenState extends ConsumerState<SignupScreen> {
                   textInputAction: TextInputAction.next,
                   validator: Validators.password,
                   decoration: InputDecoration(
+                    hintText: 'Must be at least 8 characters.',
                     labelText: 'Password',
                     prefixIcon: const Icon(Icons.lock_outline_rounded),
                     suffixIcon: IconButton(

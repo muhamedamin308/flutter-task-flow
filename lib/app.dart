@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freecodecamp_flutter_course/core/theme/app_theme.dart';
 import 'package:freecodecamp_flutter_course/presentation/providers/auth_provider.dart';
 import 'package:freecodecamp_flutter_course/presentation/providers/theme_provider.dart';
+import 'package:freecodecamp_flutter_course/presentation/screens/auth/login_screen.dart';
+import 'package:freecodecamp_flutter_course/presentation/screens/home/home_screen.dart';
 
 class TaskFlowApp extends ConsumerState {
   @override
